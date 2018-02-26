@@ -59,7 +59,7 @@ iptables 的设置在 CentOS 和 Ubuntu 下有些细节不一样，Ubuntu 这里
  - `iptables -I INPUT -j REJECT`  #禁止其他未允许的规则访问（使用该规则前一定要保证 22 端口是开着，不然就连 SSH 都会连不上）
  - `iptables -I FORWARD -j REJECT`
 
-## Iptables 资料
+## Iptables 参考资料
 
 - <https://wsgzao.github.io/post/iptables/> 
 - <http://www.vpser.net/security/linux-iptables.html> 
