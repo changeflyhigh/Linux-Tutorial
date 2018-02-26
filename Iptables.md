@@ -12,6 +12,7 @@ iptables 的设置在 CentOS 和 Ubuntu 下有些细节不一样，Ubuntu 这里
 
 - 安装（一般系统是集成的）：
  - CentOS 6：`yum install -y iptables`
+ - CentOS 7：`yum install -y iptables-service`
 
 ## Iptables 的配置文件
 
