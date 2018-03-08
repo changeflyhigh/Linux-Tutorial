@@ -1,7 +1,7 @@
 # JDK 安装
 
 
-## CentOS 下过程
+## CentOS 安装 JDK
 
 - JDK 在 CentOS 和 Ubuntu 下安装过程是一样的，所以这里不再讲 Ubuntu 系统下的安装
 - JDK 1.8 下载
