@@ -39,7 +39,7 @@
     - 解压安装包：`sudo tar -zxvf jdk-8u72-linux-x64.tar.gz`
     - 移到解压包到我个人习惯的安装目录下：`mv jdk1.8.0_72/ /usr/program/`
     - 配置环境变量：
-        - 编辑配置文件：`sudo vim /etc/profile`
+        - 编辑配置文件：`sudo vim /etc/profile.d/java.sh`
         - 在该文件的最尾巴，添加下面内容：
         ```
         # JDK
@@ -47,12 +47,9 @@
         JRE_HOME=$JAVA_HOME/jre
         PATH=$PATH:$JAVA_HOME/bin
         CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
-        export JAVA_HOME
-        export JRE_HOME
-        export PATH
-        export CLASSPATH
+        export JAVA_HOME JRE_HOME PATH CLASSPATH
         ```
-        - 执行命令，刷新该配置（必备操作）：`source /etc/profile`
+        - 执行命令，刷新该配置（必备操作）：`source /etc/profile.d/java.sh`
         - 检查是否使用了最新的 JDK：`java -version`
 
 

@@ -33,33 +33,36 @@
 #### 操作机安装 ansible
 
 =================================
-yum install -y epel-release
-yum install -y python34 python34-pip python-pip python-netaddr ansible git
-pip install --upgrade Jinja2
-yum install -y gcc libffi-devel python-devel openssl-devel
+
+    yum install -y epel-release
+    yum install -y python34 python34-pip python-pip python-netaddr ansible git
+    pip install --upgrade Jinja2
+    yum install -y gcc libffi-devel python-devel openssl-devel
+    
 =================================
 
 操作机免密码登录到其他节点
 
 如果还不懂可以具体看我的这篇文章：[]()
-ssh-keygen
-ssh-copy-id -i /root/.ssh/id_rsa.pub -p 22 root@172.20.229.225
-ssh-copy-id -i /root/.ssh/id_rsa.pub -p 22 root@172.20.229.226
-ssh-copy-id -i /root/.ssh/id_rsa.pub -p 22 root@172.20.229.227
+
+    ssh-keygen
+    ssh-copy-id -i /root/.ssh/id_rsa.pub -p 22 root@172.20.229.225
+    ssh-copy-id -i /root/.ssh/id_rsa.pub -p 22 root@172.20.229.226
+    ssh-copy-id -i /root/.ssh/id_rsa.pub -p 22 root@172.20.229.227
 
 测试下是否可以免登陆：
-ssh -p 22 root@172.20.229.225
-ssh -p 22 root@172.20.229.226
-ssh -p 22 root@172.20.229.227
+
+    ssh -p 22 root@172.20.229.225
+    ssh -p 22 root@172.20.229.226
+    ssh -p 22 root@172.20.229.227
 
 #### 修改 kubespray 项目配置
 
 - kubespray 项目官网：<https://github.com/kubernetes-incubator/kubespray>
 
-
 在本地机子上
 
-git clone https://github.com/kubernetes-incubator/kubespray.git
+    git clone https://github.com/kubernetes-incubator/kubespray.git
 
 当前时间（2018-02）最新版本是：v2.4.0，所以我 checkout v2.4.0 的 tag
 
@@ -68,9 +71,6 @@ git clone https://github.com/kubernetes-incubator/kubespray.git
 - `gcr.io/` 替换成：`registry.cn-hangzhou.aliyuncs.com/`
 - 因为 gcr.io 这个网站的本地址是：https://cloud.google.com/container-registry/，国内的环境当然就没资格上了，所以才要替换。
 - 但是需要注意的是，官网的这些镜像阿里云不一定有，所以稳妥点，你最好可以去阿里云检查下的：<https://dev.aliyun.com/search.html>，或者是：<https://hub.docker.com/>
-
-
-
 
 
 ======================================================
